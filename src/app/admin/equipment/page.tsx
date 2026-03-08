@@ -10,7 +10,7 @@ export default function AdminEquipment() {
   ];
 
   return (
-    <>
+    <div className="admin-page-container">
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '40px' }}>
         <h1 style={{ fontSize: '2.5rem' }}>EQUIPMENT MENU</h1>
         <button className="btn-primary" style={{ display: 'flex', alignItems: 'center', gap: '8px', padding: '10px 20px' }}>
@@ -48,8 +48,8 @@ export default function AdminEquipment() {
             </tr>
           </thead>
           <tbody>
-            {inventory.map((item, idx) => (
-              <tr key={idx} style={{ borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
+            {inventory.map((item) => (
+              <tr key={item.id} style={{ borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
                 <td style={{ padding: '16px 24px', color: 'rgba(255,255,255,0.5)' }}>{item.id}</td>
                 <td style={{ padding: '16px 24px', fontWeight: 500 }}>{item.name}</td>
                 <td style={{ padding: '16px 24px', color: 'rgba(255,255,255,0.7)' }}>{item.cat}</td>
@@ -63,14 +63,14 @@ export default function AdminEquipment() {
                   }}>{item.status}</span>
                 </td>
                 <td style={{ padding: '16px 24px', textAlign: 'right' }}>
-                  <button style={{ background: 'none', border: 'none', color: 'rgba(255,255,255,0.6)', cursor: 'pointer', marginRight: '16px' }}><Edit2 size={18} /></button>
-                  <button style={{ background: 'none', border: 'none', color: '#ef4444', cursor: 'pointer' }}><Trash2 size={18} /></button>
+                  <button style={{ background: 'none', border: 'none', color: 'rgba(255,255,255,0.6)', cursor: 'pointer', marginRight: '16px' }} aria-label="Edit"><Edit2 size={18} /></button>
+                  <button style={{ background: 'none', border: 'none', color: '#ef4444', cursor: 'pointer' }} aria-label="Delete"><Trash2 size={18} /></button>
                 </td>
               </tr>
             ))}
           </tbody>
         </table>
       </div>
-    </>
+    </div>
   );
 }

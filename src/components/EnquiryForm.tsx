@@ -9,7 +9,7 @@ interface Props {
   productName?: string;
 }
 
-const EnquiryForm = ({ productId, productName }: Props) => {
+const EnquiryForm = ({ productName }: Props) => {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
 

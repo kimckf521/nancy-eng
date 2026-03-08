@@ -1,4 +1,4 @@
-import { Search, Filter, Mail, Phone, Calendar, User } from 'lucide-react';
+import { Search, Filter, Mail, Calendar, User } from 'lucide-react';
 
 export default function AdminEnquiries() {
   const enquiries = [
@@ -8,7 +8,7 @@ export default function AdminEnquiries() {
   ];
 
   return (
-    <>
+    <div className="admin-page-container">
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '40px' }}>
         <h1 style={{ fontSize: '2.5rem' }}>CUSTOMER ENQUIRIES</h1>
       </div>
@@ -31,8 +31,8 @@ export default function AdminEnquiries() {
       </div>
 
       <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-        {enquiries.map((enq, idx) => (
-          <div key={idx} className="glass-card" style={{ padding: '24px', display: 'flex', flexDirection: 'column', borderLeft: enq.status === 'New' ? '4px solid var(--primary)' : '4px solid transparent' }}>
+        {enquiries.map((enq) => (
+          <div key={enq.id} className="glass-card" style={{ padding: '24px', display: 'flex', flexDirection: 'column', borderLeft: enq.status === 'New' ? '4px solid var(--primary)' : '4px solid transparent' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '16px' }}>
               <div>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '8px' }}>
@@ -71,6 +71,6 @@ export default function AdminEnquiries() {
           </div>
         ))}
       </div>
-    </>
+    </div>
   );
 }

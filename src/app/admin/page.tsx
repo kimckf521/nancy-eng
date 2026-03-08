@@ -1,4 +1,4 @@
-import { Package, Users, MessageSquare, Plus } from 'lucide-react';
+import { Package, Users, MessageSquare } from 'lucide-react';
 
 export default function AdminDashboard() {
   return (
@@ -42,7 +42,7 @@ export default function AdminDashboard() {
           <div style={{ display: 'flex', justifyContent: 'space-between', paddingBottom: '16px', borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
               <Users size={20} color="var(--primary)" />
-              <span style={{ fontWeight: 500 }}>New employee account "John Engineer" created.</span>
+              <span style={{ fontWeight: 500 }}>New employee account &quot;John Engineer&quot; created.</span>
             </div>
             <span style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.85rem' }}>1 day ago</span>
           </div>
