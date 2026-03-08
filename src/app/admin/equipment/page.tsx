@@ -59,7 +59,7 @@ export default function AdminEquipment() {
                     padding: '4px 10px', borderRadius: '99px', fontSize: '0.8rem', fontWeight: 600,
                     background: item.status === 'Active' ? 'rgba(34, 197, 94, 0.1)' : 'rgba(245, 158, 11, 0.1)',
                     color: item.status === 'Active' ? '#22c55e' : '#f59e0b',
-                    border: \`1px solid \${item.status === 'Active' ? 'rgba(34, 197, 94, 0.2)' : 'rgba(245, 158, 11, 0.2)'}\`
+                    border: `1px solid ${item.status === 'Active' ? 'rgba(34, 197, 94, 0.2)' : 'rgba(245, 158, 11, 0.2)'}`
                   }}>{item.status}</span>
                 </td>
                 <td style={{ padding: '16px 24px', textAlign: 'right' }}>

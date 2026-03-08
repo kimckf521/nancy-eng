@@ -1,4 +1,4 @@
-import { Search, Filter, Mail, Phone, Calendar } from 'lucide-react';
+import { Search, Filter, Mail, Phone, Calendar, User } from 'lucide-react';
 
 export default function AdminEnquiries() {
   const enquiries = [
@@ -41,7 +41,7 @@ export default function AdminEnquiries() {
                     padding: '4px 10px', borderRadius: '99px', fontSize: '0.75rem', fontWeight: 600, textTransform: 'uppercase',
                     background: enq.status === 'New' ? 'rgba(251, 191, 36, 0.1)' : enq.status === 'Pending' ? 'rgba(59, 130, 246, 0.1)' : 'rgba(34, 197, 94, 0.1)',
                     color: enq.status === 'New' ? 'var(--primary)' : enq.status === 'Pending' ? '#3b82f6' : '#22c55e',
-                    border: \`1px solid \${enq.status === 'New' ? 'rgba(251, 191, 36, 0.2)' : enq.status === 'Pending' ? 'rgba(59, 130, 246, 0.2)' : 'rgba(34, 197, 94, 0.2)'}\`
+                    border: `1px solid ${enq.status === 'New' ? 'rgba(251, 191, 36, 0.2)' : enq.status === 'Pending' ? 'rgba(59, 130, 246, 0.2)' : 'rgba(34, 197, 94, 0.2)'}`
                   }}>{enq.status}</span>
                 </div>
                 <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.9rem' }}>ID: {enq.id}</p>
@@ -53,7 +53,7 @@ export default function AdminEnquiries() {
             
             <div style={{ background: 'rgba(255,255,255,0.02)', padding: '16px', borderRadius: '8px', marginBottom: '16px' }}>
               <p style={{ color: 'rgba(255,255,255,0.8)', fontStyle: 'italic', fontSize: '0.95rem', lineHeight: 1.5 }}>
-                "Hello, I am interested in renting this equipment for a 6-month period starting next week. Can you provide a detailed quote including transportation to site block 4?"
+                &quot;Hello, I am interested in renting this equipment for a 6-month period starting next week. Can you provide a detailed quote including transportation to site block 4?&quot;
               </p>
             </div>
 
